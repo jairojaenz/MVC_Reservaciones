@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_PageMain.cshtml";
+}
+
+<h2>Registro de Recepcionista</h2>
+@using (Html.BeginForm("Action", "Controller", FormMethod.Post))
+{
+    @*crear un formulario para registar recepcionista*@
+    <div class="container-fluid justify-content-lg-start">
+        <div class="col-12 col-md-6 mt-4">
+            @Html.Label("Numero Inss")
+        </div>
+        <div class="col-12 col-md-6 ">
+            @Html.TextBox("Numero Inss")
+            </div>
+        <div class="col-12 col-md-6 mt-4">
+            @Html.Label("Nombre Completo")
+        </div>
+        <div class="col-12 col-md-6">
+            @Html.TextBox("Nombre Completo")
+            </div>
+        <div class="col-12 col-md-6 mt-4">
+            @Html.Label("Apellidos")
+            </div>
+        <div class="col-12 col-md-6">
+            @Html.TextBox("Apellidos")
+            </div>
+        <div class="col-12 col-md-6 mt-4">
+            @Html.Label("Email")
+            </div>
+        <div class="col-12 col-md-6">
+            @Html.TextBox("Email")
+            </div>
+        <div class="col-12 col-md-6 mt-4">
+            @Html.Label("Telefono")
+            </div>
+        <div class="col-12 col-md-6">
+            @Html.TextBox("Telefono")
+            </div>
+        <div class="col-12 col-md-6 mt-4">
+            @Html.Label("Salario")
+            </div>
+        <div class="col-12 col-md-6">
+            @Html.TextBox("Salario")
+            </div>
+        @* Button de registrar *@
+        <div class="col-lg mt-4">
+            <input type="submit" value="Registar" class="btn btn-outline-dark" />
+            </div>
+    </div>
+ }
+

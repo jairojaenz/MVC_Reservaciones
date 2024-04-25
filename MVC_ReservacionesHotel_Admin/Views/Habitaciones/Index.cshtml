@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_PageMain.cshtml";
+    ViewBag.Title = "Registrar Habitaciones";
+}
+
+@* Crear formulario para registro de habitaciones con los campos: Numero de habitacion, Tipo de habitaacion
+    Piso del Hotel, Precio de Dia, Descripcion y estado*@
+
+@using (Html.BeginForm("Action", "Controller", FormMethod.Post))
+{
+    <h2>Registro de habitaciones</h2>
+   <div class="container-fluid justify-content-lg-start">
+     <div class="col-12 col-md-6 mt-4">
+        @Html.Label("Numero de habitacion")
+        <div class="col-12 col-md-6">
+        @Html.TextBox("NumeroHabitacion")
+        </div>
+    </div>
+    <div class="col-12 col-md-6 mt-4">
+        @Html.Label("Tipo de habitacion")
+        <div class="col-12 col-md-6">
+        @Html.TextBox("TipoHabitacion")
+        </div>
+    </div>
+    <div class="col-12 col-md-6 mt-4">
+        @Html.Label("Piso del Hotel")
+        <div class="col-12 col-md-6">
+        @Html.TextBox("PisoHotel")
+        </div>
+    </div>
+    <div class="col-12 col-md-6 mt-4">
+        @Html.Label("Precio de Dia")
+        <div class="col-12 col-md-6">
+        @Html.TextBox("PrecioDia")
+        </div>
+    </div>
+    <div class="col-12 col-md-6 mt-4">
+        @Html.Label("Descripcion")
+        <div class="col-12 col-md-6">
+        @Html.TextBox("Descripcion")
+        </div>
+    </div>
+    <div class="col-12 col-md-6 mt-4">
+        @Html.Label("Estado")
+        <div class="col-12 col-md-6">
+        @Html.TextBox("Estado")
+        </div>
+    </div>
+    <div class="col-lg mt-4">
+        <input type="submit" value="Registar" class="btn btn-outline-dark" />
+    </div>
+</div>
+}

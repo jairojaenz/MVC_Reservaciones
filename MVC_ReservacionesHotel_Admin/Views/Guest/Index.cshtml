@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Registrar";
+    Layout = "~/Views/Shared/_Layout_PageMain.cshtml";
+}
+
+<h2>Registro de huesped</h2>
+@using (Html.BeginForm("Action", "Controller", FormMethod.Post))
+{
+    @*crear un formulario para registar huesped*@
+<div class="container justify-content-lg-start">
+    <br />
+    <div class="col-12 col-md-6 mt-4">
+        @Html.Label("Cèdula")
+    </div>
+    <div class="col-12 col-md-6">
+        @Html.TextBox("Cèdula")
+    </div>
+    <div class="col-12 col-md-6 mt-4">
+        @Html.Label("Nombre")
+    </div>
+    <div class="col-12 col-md-6">
+        @Html.TextBox("Nombre")
+    </div>
+    <div class="col-12 col-md-6 mt-4">
+        @Html.Label("Apellido")
+    </div>
+    <div class="col-12 col-md-6">
+        @Html.TextBox("Apellido")
+    </div>
+    <div class="col-12 col-md-6 mt-4">
+        @Html.Label("Telefono")
+    </div>
+    <div class="col-12 col-md-6">
+        @Html.TextBox("Telefono")
+    </div>
+    <div class="col-12 col-md-6 mt-4">
+        @Html.Label("Correo")
+    </div>
+    <div class="col-12 col-md-6">
+        @Html.TextBox("Correo")
+    </div>
+    <div class="col-lg mt-4">
+        <input type="submit" value="Registar" class="btn btn-outline-dark" />
+    </div>
+</div>
+
+}
+
+
+

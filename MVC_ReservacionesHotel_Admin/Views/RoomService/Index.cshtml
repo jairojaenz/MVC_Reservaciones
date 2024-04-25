@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_PageMain.cshtml";
+}
+
+
+@* Crear forulario de registro de servicio a la habitacion incluye campos como: razon, Descripcion, Precio unitario*@
+<h2>Servicio a la Habitacion</h2>
+@using (Html.BeginForm("Action", "Controller", FormMethod.Post))
+{
+   <div class="container mt-3">  
+            <div class="col-12 col-md-6 mt-4">
+                @Html.Label("Razon")
+                <div class="col-12 col-md-6">
+                    @Html.TextBox("Razon")
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mt-4">
+                @Html.Label("Descripcion")
+                <div class="col-12 col-md-6">
+                    @Html.TextBox("Descripcion")
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mt-4">
+                @Html.Label("Precio Unitario")
+                <div class="col-12 col-md-6">
+                    @Html.TextBox("PrecioUnitario")
+                </div>
+            </div>
+            <div class="col-lg mt-4">
+                <input type="submit" value="Registar" class="btn btn-outline-dark" />
+            </div>
+    </div>
+}
+
+
+
+
